@@ -5,17 +5,17 @@ import _ from "lodash"
 const queries = /* GraphQL */ `
 type Query {
   hello: String
-}`
+}
+`
 
 const resolvers = {
     Query: {
         hello: () => 'Hello from yoga!'
-    }
+    },
+
 }
 
 export const schema = createSchema({
-
     typeDefs: [queries, User],
-
     resolvers: _.merge(resolvers, userResolvers)
 })
