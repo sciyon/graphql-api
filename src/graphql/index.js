@@ -12,7 +12,6 @@ const resolvers = {
     Query: {
         hello: () => 'Hello from yoga!'
     },
-
 }
 
 export const schema = createSchema({
