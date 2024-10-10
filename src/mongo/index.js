@@ -23,6 +23,7 @@ export async function setup_database() {
         db,
         users: db.collection('users'),
         movies: db.collection('movies'),
+        comments: db.collection('comments')
     }
   } catch(err){
     console.log("Error connecting to database.");
