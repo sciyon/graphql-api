@@ -37,12 +37,8 @@ export const resolvers = {
 
     Mutation: {
         createUser: async(_, { user }, context) => {
-            const movies = await context.client
-                .db('sample_mflix')
-                .collection('movies')
-                .find()
-                .toArray()
-            console.log(movies);
+            const movies = await context.mongo.movies.find().toArray()
+            console.log(movies)
             return{
                 id: 1,
                 ...user,
